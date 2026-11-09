@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TVET ICT Academy | Technical & Vocational Training</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0265d2',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            dark: '#0b132b'
+                        },
+                        accent: '#10b981'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles & Visual Touches */
+        .glass-nav {
+            background: rgba(11, 19, 43, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0b132b 0%, #1c2541 50%, #075985 100%);
+        }
+        .pulse-glow {
+            box-shadow: 0 0 20px rgba(2, 132, 199, 0.4);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b132b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0369a1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0284c7;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-accent flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    <i class="fa-solid font-mono fa-code"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-white block leading-none">TVET ICT</span>
+                    <span class="text-xs font-medium text-brand-500 uppercase tracking-widest">Academy of Tech</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                <a href="#home" class="text-slate-300 hover:text-brand-500 transition-colors">Home</a>
+                <a href="#courses" class="text-slate-300 hover:text-brand-500 transition-colors">Programs</a>
+                <a href="#calculator" class="text-slate-300 hover:text-brand-500 transition-colors">Fee Estimator</a>
+                <a href="#media" class="text-slate-300 hover:text-brand-500 transition-colors">Media Lab</a>
+                <a href="#apply" class="px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white shadow-md shadow-brand-600/30 transition-all hover:-translate-y-0.5">Apply Now</a>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-300 hover:text-brand-500 font-medium">Home</a>
+            <a href="#courses" class="block py-2 text-slate-300 hover:text-brand-500 font-medium">Programs</a>
+            <a href="#calculator" class="block py-2 text-slate-300 hover:text-brand-500 font-medium">Fee Estimator</a>
+            <a href="#media" class="block py-2 text-slate-300 hover:text-brand-500 font-medium">Media Lab</a>
+            <a href="#apply" class="block w-full text-center py-3 mt-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-semibold">Apply Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 hero-gradient overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(#0284c7_1px,transparent_1px)] [background-size:32px_32px] opacity-15"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-900/80 border border-brand-500/30 text-brand-500 text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        <span>Official TVET Diploma & Certificate Qualifications</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Master Practical Skills in <span class="bg-gradient-to-r from-brand-500 to-accent bg-clip-text text-transparent">Information Technology</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Kickstart your tech career with hand-on training in Software Engineering, Cybersecurity, Enterprise Networking, and IT Support. Aligned with modern TVET CBET standards.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#apply" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-lg shadow-lg shadow-brand-600/30 transition-all hover:-translate-y-1 text-center flex items-center justify-center gap-2">
+                            <span>Enroll For Admissions</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#courses" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-lg transition-all text-center">
+                            Explore Programs
+                        </a>
+                    </div>
+
+                    <!-- Key Stats -->
+                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-3xl font-extrabold text-white">94%</p>
+                            <p class="text-xs text-slate-400 font-medium uppercase mt-1">Graduate Employment</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-brand-500">100%</p>
+                            <p class="text-xs text-slate-400 font-medium uppercase mt-1">Hands-on Lab Work</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-accent">TVET</p>
+                            <p class="text-xs text-slate-400 font-medium uppercase mt-1">Level 5 & 6 Certified</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Visual -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 shadow-2xl backdrop-blur-md">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-700 mb-4">
+                            <div class="flex space-x-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                            </div>
+                            <span class="text-xs font-mono text-slate-400">terminal@tvet-ict:~</span>
+                        </div>
+                        <div class="font-mono text-sm space-y-3">
+                            <p class="text-accent">$ tvet-academy status --check</p>
+                            <p class="text-slate-300">&gt; Initializing ICT Training Modules...</p>
+                            <div class="bg-slate-900/90 p-3 rounded-lg border border-slate-800 text-xs space-y-1">
+                                <p class="text-blue-400">[OK] Software Dev (Level 6)</p>
+                                <p class="text-green-400">[OK] Cybersecurity Lab Ready</p>
+                                <p class="text-purple-400">[OK] CISCO Networking Online</p>
+                            </div>
+                            <p class="text-slate-400 text-xs">// Next Intake: Enrolling for Upcoming Semester</p>
+                            <a href="#apply" class="block w-full py-2.5 mt-2 text-center rounded bg-brand-600/30 hover:bg-brand-600/50 border border-brand-500 text-brand-300 font-semibold text-xs uppercase tracking-wider transition-all">
+                                Launch Application &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ICT Programs / Courses Section -->
+    <section id="courses" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-brand-500 uppercase tracking-widest mb-2">Technical Qualifications</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white">ICT Programs & Competency Courses</h3>
+                <p class="mt-4 text-slate-400 text-base">Select a category to filter our accredited TVET curriculum designed for market-ready technical proficiency.</p>
+                
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8" id="course-filters">
+                    <button data-filter="all" class="px-5 py-2 rounded-full bg-brand-600 text-white font-medium text-sm transition-all shadow-md filter-btn active">All Programs</button>
+                    <button data-filter="software" class="px-5 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-all filter-btn">Software Dev</button>
+                    <button data-filter="networking" class="px-5 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-all filter-btn">Networking</button>
+                    <button data-filter="cybersecurity" class="px-5 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-all filter-btn">Cybersecurity</button>
+                    <button data-filter="support" class="px-5 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-sm transition-all filter-btn">IT Support</button>
+                </div>
+            </div>
+
+            <!-- Course Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="course-grid">
+                
+                <!-- Course Card 1 -->
+                <div class="course-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="software">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold uppercase">TVET Level 6</span>
+                            <span class="text-slate-400 text-xs font-mono"><i class="fa-regular fa-clock mr-1"></i>2 Years</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Diploma in Software Engineering</h4>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Full-stack web & mobile applications development, databases, version control, and modern software architectures.</p>
+                        <div class="space-y-2 mb-4">
+                            <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block">Key Competencies:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">JavaScript / Python</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">SQL / NoSQL</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Git & DevOps</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-900/60 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Certification: National Diploma</span>
+                        <a href="#apply" class="text-brand-500 hover:text-brand-400 font-semibold text-sm flex items-center gap-1">Apply <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="course-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="networking">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold uppercase">TVET Level 6</span>
+                            <span class="text-slate-400 text-xs font-mono"><i class="fa-regular fa-clock mr-1"></i>2 Years</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Diploma in Telecommunications & Networking</h4>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Master CISCO routing, switching, fiber optic installation, wireless infrastructure, and enterprise system design.</p>
+                        <div class="space-y-2 mb-4">
+                            <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block">Key Competencies:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">CCNA Protocols</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Fiber Optics</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Server Management</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-900/60 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Certification: National Diploma</span>
+                        <a href="#apply" class="text-brand-500 hover:text-brand-400 font-semibold text-sm flex items-center gap-1">Apply <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="course-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="cybersecurity">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-bold uppercase">TVET Level 6</span>
+                            <span class="text-slate-400 text-xs font-mono"><i class="fa-regular fa-clock mr-1"></i>1.5 Years</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Cybersecurity & Ethical Hacking</h4>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Defense against modern cyber threats, penetration testing, security auditing, and forensic network analysis.</p>
+                        <div class="space-y-2 mb-4">
+                            <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block">Key Competencies:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Network Security</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Ethical Hacking</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Cryptography</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-900/60 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Certification: Craft / Higher Cert</span>
+                        <a href="#apply" class="text-brand-500 hover:text-brand-400 font-semibold text-sm flex items-center gap-1">Apply <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course Card 4 -->
+                <div class="course-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="support">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase">TVET Level 5</span>
+                            <span class="text-slate-400 text-xs font-mono"><i class="fa-regular fa-clock mr-1"></i>1 Year</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Certificate in Computer Maintenance & Support</h4>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Practical hardware troubleshooting, operating system installation, peripheral setup, and customer IT service desk support.</p>
+                        <div class="space-y-2 mb-4">
+                            <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block">Key Competencies:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">CompTIA A+ Standard</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">OS Installation</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Hardware Repair</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-900/60 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Certification: Craft Certificate</span>
+                        <a href="#apply" class="text-brand-500 hover:text-brand-400 font-semibold text-sm flex items-center gap-1">Apply <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course Card 5 -->
+                <div class="course-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="software">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase">TVET Level 5</span>
+                            <span class="text-slate-400 text-xs font-mono"><i class="fa-regular fa-clock mr-1"></i>1 Year</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Certificate in Web & Graphic Design</h4>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Build responsive modern front-end designs, interface prototypes, dynamic web styling, and digital UI/UX creation.</p>
+                        <div class="space-y-2 mb-4">
+                            <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block">Key Competencies:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">HTML5 / CSS3</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Tailwind / Bootstrap</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Figma Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-900/60 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Certification: Certificate</span>
+                        <a href="#apply" class="text-brand-500 hover:text-brand-400 font-semibold text-sm flex items-center gap-1">Apply <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Course Card 6 -->
+                <div class="course-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between" data-category="networking">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold uppercase">TVET Level 6</span>
+                            <span class="text-slate-400 text-xs font-mono"><i class="fa-regular fa-clock mr-1"></i>2 Years</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Diploma in Cloud Computing & Systems</h4>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">Virtualization, cloud architecture deployment, Linux server administration, and infrastructure management.</p>
+                        <div class="space-y-2 mb-4">
+                            <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider block">Key Competencies:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">AWS / Azure Basics</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Linux Admin</span>
+                                <span class="px-2.5 py-1 bg-slate-800 text-slate-300 rounded text-xs">Docker Basics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-slate-900/60 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400">Certification: National Diploma</span>
+                        <a href="#apply" class="text-brand-500 hover:text-brand-400 font-semibold text-sm flex items-center gap-1">Apply <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Fee & Duration Calculator Widget -->
+    <section id="calculator" class="py-16 bg-slate-900 border-t border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-950 border border-slate-800 rounded-3xl p-6 md:p-10 shadow-2xl">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="text-xs font-bold text-accent uppercase tracking-widest">Estimator Tool</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Course Fee & Duration Calculator</h3>
+                    <p class="text-slate-400 text-sm mt-2">Customize your study mode to see approximate TVET tuition and term estimates.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Controls -->
+                    <div class="space-y-5">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Select Program Level</label>
+                            <select id="calc-program" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-brand-500">
+                                <option value="dip-2yr" data-fee="35000" data-terms="6">Diploma Program (Level 6) - 2 Years</option>
+                                <option value="cert-1yr" data-fee="28000" data-terms="3">Craft Certificate (Level 5) - 1 Year</option>
+                                <option value="short-6mo" data-fee="18000" data-terms="2">Short Skill Course - 6 Months</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Study Mode</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="flex items-center justify-center p-3 rounded-xl border border-slate-700 bg-slate-900 cursor-pointer hover:border-brand-500">
+                                    <input type="radio" name="study_mode" value="full" checked class="text-brand-600 focus:ring-0">
+                                    <span class="ml-2 text-sm text-slate-200 font-medium">Full-Time (Regular)</span>
+                                </label>
+                                <label class="flex items-center justify-center p-3 rounded-xl border border-slate-700 bg-slate-900 cursor-pointer hover:border-brand-500">
+                                    <input type="radio" name="study_mode" value="part" class="text-brand-600 focus:ring-0">
+                                    <span class="ml-2 text-sm text-slate-200 font-medium">Part-Time / Evening</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="checkbox" id="calc-lab-pass" checked class="rounded bg-slate-900 border-slate-700 text-brand-600 focus:ring-0">
+                                <span class="text-sm text-slate-300">Include Unlimited ICT Lab & Cisco Access Pass</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Calculated Output Display -->
+                    <div class="bg-gradient-to-br from-brand-950 to-slate-900 border border-brand-800/40 rounded-2xl p-6 text-center md:text-left space-y-4">
+                        <div class="border-b border-slate-800 pb-4">
+                            <span class="text-xs text-slate-400 uppercase font-semibold">Estimated Fee Per Term</span>
+                            <p class="text-3xl sm:text-4xl font-extrabold text-brand-400 mt-1" id="calc-output-term font-mono">KSh <span id="out-fee-term">35,000</span></p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase">Total Trimesters</span>
+                                <p class="text-lg font-bold text-white mt-1" id="out-terms">6 Terms</p>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase">Estimated Total</span>
+                                <p class="text-lg font-bold text-accent mt-1">KSh <span id="out-fee-total">210,000</span></p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-500 italic">*Government subsidies/HELB TVET loans available for eligible applicants.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Media & Audio Section -->
+    <section id="media" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold text-brand-500 uppercase tracking-widest">Interactive ICT Hub</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Lab Facilities & Media Center</h2>
+                <p class="text-slate-400 text-sm mt-3">Experience our high-tech learning environment, interactive network topology simulations, and audio lab previews.</p>
+            </div>
+
+            <!-- Media Content Grid -->
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Audio Center & Controls Card -->
+                <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-slate-800 pb-4">
+                        <div class="w-10 h-10 rounded-lg bg-brand-600/20 text-brand-400 flex items-center justify-center">
+                            <i class="fa-solid fa-headphones text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">ICT Sound Lab & Audio Previews</h3>
+                            <p class="text-xs text-slate-400">Web Audio Sound Generator & Lecture Samples</p>
+                        </div>
+                    </div>
+
+                    <!-- Ambient Sound Generator -->
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-semibold text-slate-300"><i class="fa-solid fa-server text-brand-500 mr-2"></i>Server Room Ambience</span>
+                            <span id="audio-status" class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-400">Paused</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Synthesizes ambient white-noise frequency simulating a high-performance computer data center.</p>
+                        <button id="btn-toggle-ambient" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs flex items-center justify-center space-x-2 transition-all">
+                            <i class="fa-solid fa-play"></i>
+                            <span>Toggle Ambient Sound</span>
+                        </button>
+                    </div>
+
+                    <!-- Audio Effect Trigger Buttons -->
+                    <div class="space-y-3">
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Interactive System Sounds</span>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button id="btn-sound-chime" class="p-3 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-xl text-left text-xs font-medium text-slate-300 transition-all flex items-center space-x-2">
+                                <i class="fa-solid fa-volume-high text-brand-500"></i>
+                                <span>Startup Chime</span>
+                            </button>
+                            <button id="btn-sound-beep" class="p-3 bg-slate-950 hover:bg-slate-800 border border-slate-800 rounded-xl text-left text-xs font-medium text-slate-300 transition-all flex items-center space-x-2">
+                                <i class="fa-solid fa-terminal text-accent"></i>
+                                <span>Console Signal</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Custom HTML5 Audio Player for Sample Orientation Audio -->
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3">
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Dean's Intake Speech Preview</span>
+                        <div class="flex items-center space-x-3">
+                            <button id="speech-play-btn" class="w-10 h-10 rounded-full bg-brand-600 hover:bg-brand-500 text-white flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-play text-xs"></i>
+                            </button>
+                            <div class="w-full">
+                                <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                    <div id="audio-progress" class="h-full bg-brand-500 w-0 transition-all duration-200"></div>
+                                </div>
+                                <div class="flex justify-between text-[10px] text-slate-500 mt-1 font-mono">
+                                    <span id="audio-curr-time">0:00</span>
+                                    <span>0:15 (Synthetic Preview)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Network Canvas Visualization -->
+                <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Interactive Network Topology Simulation</h3>
+                            <p class="text-xs text-slate-400">Click or drag nodes to simulate packet routing</p>
+                        </div>
+                        <button id="reset-canvas-btn" class="text-xs px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium">Reset View</button>
+                    </div>
+
+                    <!-- Interactive HTML5 Canvas -->
+                    <div class="w-full h-64 sm:h-72 bg-slate-950 rounded-xl border border-slate-800 relative overflow-hidden flex items-center justify-center">
+                        <canvas id="networkCanvas" class="w-full h-full cursor-crosshair"></canvas>
+                        <div class="absolute bottom-2 right-2 bg-slate-900/80 px-2 py-1 rounded text-[10px] font-mono text-slate-400 border border-slate-800">
+                            Status: Packets Active
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-400 mt-4 leading-relaxed">
+                        <i class="fa-solid fa-circle-info text-brand-500 mr-1"></i>
+                        Students in our CISCO Networking lab build and troubleshoot live topological structures similar to the simulation above.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Facility Photo Gallery -->
+            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Software Lab" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/0b132b/ffffff?text=Software+Lab'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 p-4 flex flex-col justify-end">
+                        <span class="text-xs font-bold text-brand-400 uppercase">Software Lab</span>
+                        <h4 class="text-sm font-semibold text-white">Modern Coding Workstations</h4>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Networking Hardware" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/0b132b/ffffff?text=CISCO+Rack+Lab'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 p-4 flex flex-col justify-end">
+                        <span class="text-xs font-bold text-accent uppercase">CISCO Network Lab</span>
+                        <h4 class="text-sm font-semibold text-white">Server Racks & Routers</h4>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Cyber Security Lab" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/0b132b/ffffff?text=Cyber Security+Lab'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 p-4 flex flex-col justify-end">
+                        <span class="text-xs font-bold text-purple-400 uppercase">Cyber Lab</span>
+                        <h4 class="text-sm font-semibold text-white">Security Operation Simulation</h4>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=600&q=80" alt="Hardware Repair Lab" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/0b132b/ffffff?text=Hardware+Maintenance'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 p-4 flex flex-col justify-end">
+                        <span class="text-xs font-bold text-amber-400 uppercase">Hardware Tech Lab</span>
+                        <h4 class="text-sm font-semibold text-white">PC Assembly & Diagnostics</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration / Application Form Section -->
+    <section id="apply" class="py-20 bg-slate-900 border-t border-slate-800 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center mb-10">
+                    <span class="text-xs font-bold text-brand-500 uppercase tracking-widest">Admissions Open</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Apply For TVET ICT Admissions</h2>
+                    <p class="text-slate-400 text-sm mt-2">Fill out the form below. Our admissions desk will contact you with fee structures and term schedules.</p>
+                </div>
+
+                <!-- Live Validation Form -->
+                <form id="enrollment-form" class="space-y-6" novalidate>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <!-- Full Name -->
+                        <div>
+                            <label for="fullname" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Full Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="fullname" name="fullname" placeholder="e.g. Jane Doe" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
+                            <p class="text-red-400 text-xs mt-1.5 hidden" id="err-fullname">Please enter your full name.</p>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Email Address <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="jane@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
+                            <p class="text-red-400 text-xs mt-1.5 hidden" id="err-email">Please enter a valid email address.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <!-- Phone Number -->
+                        <div>
+                            <label for="phone" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Phone Number <span class="text-red-500">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g. +254 700 000000" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
+                            <p class="text-red-400 text-xs mt-1.5 hidden" id="err-phone">Please enter a valid phone number (at least 10 digits).</p>
+                        </div>
+
+                        <!-- Academic Qualification -->
+                        <div>
+                            <label for="academic" class="block text-xs font-semibold text-slate-300 uppercase mb-2">KCSE / Academic Level <span class="text-red-500">*</span></label>
+                            <select id="academic" name="academic" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-brand-500 transition-colors">
+                                <option value="">-- Select Grade / Standard --</option>
+                                <option value="KCSE C+ and Above">KCSE Grade C+ and Above (Diploma)</option>
+                                <option value="KCSE C Plain / C-">KCSE Grade C / C- (Diploma Eligible)</option>
+                                <option value="KCSE D+ or D Plain">KCSE Grade D+ / D / D- (Certificate Level)</option>
+                                <option value="Other Certificate">Other Tertiary Certificate / Degree</option>
+                            </select>
+                            <p class="text-red-400 text-xs mt-1.5 hidden" id="err-academic">Please select your academic qualification level.</p>
+                        </div>
+                    </div>
+
+                    <!-- Program Choice -->
+                    <div>
+                        <label for="course-choice" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Intended ICT Program <span class="text-red-500">*</span></label>
+                        <select id="course-choice" name="course_choice" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-brand-500 transition-colors">
+                            <option value="">-- Choose Course --</option>
+                            <option value="Diploma in Software Engineering">Diploma in Software Engineering (Level 6)</option>
+                            <option value="Diploma in Telecommunications & Networking">Diploma in Telecommunications & Networking (Level 6)</option>
+                            <option value="Cybersecurity & Ethical Hacking">Cybersecurity & Ethical Hacking (Level 6)</option>
+                            <option value="Certificate in Computer Maintenance">Certificate in Computer Maintenance & Support (Level 5)</option>
+                            <option value="Certificate in Web Design">Certificate in Web & Graphic Design (Level 5)</option>
+                        </select>
+                        <p class="text-red-400 text-xs mt-1.5 hidden" id="err-course">Please select a course program.</p>
+                    </div>
+
+                    <!-- Personal Statement -->
+                    <div>
+                        <label for="message" class="block text-xs font-semibold text-slate-300 uppercase mb-2">Statement of Intent / Questions (Optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Tell us briefly about your career goals or specific questions regarding TVET entry..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-lg shadow-lg shadow-brand-600/30 transition-all hover:-translate-y-0.5 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-paper-plane text-sm"></i>
+                        <span>Submit Application Now</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal Notification -->
+    <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-md w-full text-center space-y-5 shadow-2xl relative animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/30 text-2xl">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white">Application Received!</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+                Thank you for applying to TVET ICT Academy. Your application reference code is <span id="modal-ref-code" class="font-mono text-brand-400 font-bold">#TVET-8921</span>. Our admissions officer will contact you shortly via email.
+            </p>
+            <button id="close-modal-btn" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold transition-all">
+                Close & Return
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1: Brand info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid font-mono fa-code"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">TVET ICT Academy</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">Empowering the technical workforce of tomorrow through accredited, high-skill TVET Information Technology certifications.</p>
+                </div>
+
+                <!-- Col 2: Programs -->
+                <div>
+                    <h5 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider">Programs</h5>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#courses" class="hover:text-white transition-colors">Software Engineering</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Cybersecurity</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Networking Systems</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Hardware Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider">Admissions</h5>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#calculator" class="hover:text-white transition-colors">Fee Structure Estimator</a></li>
+                        <li><a href="#apply" class="hover:text-white transition-colors">Entry Requirements</a></li>
+                        <li><a href="#media" class="hover:text-white transition-colors">Virtual Lab Tour</a></li>
+                        <li><a href="#apply" class="hover:text-white transition-colors">Scholarship & HELB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div>
+                    <h5 class="text-white font-semibold mb-3 text-xs uppercase tracking-wider">Campus Contact</h5>
+                    <ul class="space-y-2 text-xs">
+                        <li><i class="fa-solid fa-location-dot text-brand-500 mr-2"></i>Tech Innovation Campus, Hub Wing</li>
+                        <li><i class="fa-solid fa-envelope text-brand-500 mr-2"></i>admissions@tvet-ict.edu</li>
+                        <li><i class="fa-solid fa-phone text-brand-500 mr-2"></i>+254 (0) 700 123 456</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; <span id="current-year"></span> TVET ICT Academy. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-300"><i class="fa-brands fa-github text-lg"></i></a>
+                    <a href="#" class="hover:text-slate-300"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                    <a href="#" class="hover:text-slate-300"><i class="fa-brands fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Set dynamic current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // 1. Mobile Menu Toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking nav links
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 2. Course Category Filtering System
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const courseCards = document.querySelectorAll('.course-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button state
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-brand-600', 'text-white', 'shadow-md');
+                        b.classList.add('bg-slate-800', 'text-slate-300');
+                    });
+                    btn.classList.remove('bg-slate-800', 'text-slate-300');
+                    btn.classList.add('bg-brand-600', 'text-white', 'shadow-md');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    // Filter cards
+                    courseCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 3. Fee & Duration Calculator
+            const calcProgram = document.getElementById('calc-program');
+            const calcLabPass = document.getElementById('calc-lab-pass');
+            const studyModeRadios = document.querySelectorAll('input[name="study_mode"]');
+            
+            const outFeeTerm = document.getElementById('out-fee-term');
+            const outTerms = document.getElementById('out-terms');
+            const outFeeTotal = document.getElementById('out-fee-total');
+
+            function updateCalculator() {
+                const selectedOption = calcProgram.options[calcProgram.selectedIndex];
+                let baseFee = parseFloat(selectedOption.getAttribute('data-fee'));
+                let totalTerms = parseInt(selectedOption.getAttribute('data-terms'));
+                
+                // Mode adjustment
+                const isPartTime = document.querySelector('input[name="study_mode"]:checked').value === 'part';
+                if (isPartTime) {
+                    baseFee *= 0.9; // 10% discount per term for part-time evening
+                }
+
+                // Add lab pass cost
+                if (calcLabPass.checked) {
+                    baseFee += 2500;
+                }
+
+                const totalFee = baseFee * totalTerms;
+
+                outFeeTerm.textContent = Math.round(baseFee).toLocaleString();
+                outTerms.textContent = `${totalTerms} Terms`;
+                outFeeTotal.textContent = Math.round(totalFee).toLocaleString();
+            }
+
+            calcProgram.addEventListener('change', updateCalculator);
+            calcLabPass.addEventListener('change', updateCalculator);
+            studyModeRadios.forEach(radio => radio.addEventListener('change', updateCalculator));
+            updateCalculator(); // Initial calculation
+
+            // 4. Web Audio API Sound Generator & Effects
+            let audioCtx = null;
+            let ambientOscillator = null;
+            let ambientGain = null;
+            let isAmbientPlaying = false;
+
+            function initAudioContext() {
+                if (!audioCtx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioCtx = new AudioContext();
+                }
+            }
+
+            // Toggle Ambient Tech Noise
+            const toggleAmbientBtn = document.getElementById('btn-toggle-ambient');
+            const audioStatus = document.getElementById('audio-status');
+
+            toggleAmbientBtn.addEventListener('click', () => {
+                initAudioContext();
+
+                if (!isAmbientPlaying) {
+                    // Create low frequency rumble simulating server fans
+                    ambientOscillator = audioCtx.createOscillator();
+                    ambientGain = audioCtx.createGain();
+
+                    ambientOscillator.type = 'sawtooth';
+                    ambientOscillator.frequency.setValueAtTime(60, audioCtx.currentTime); // 60Hz hum
+
+                    // Low-pass filter for smooth background drone
+                    const filter = audioCtx.createBiquadFilter();
+                    filter.type = 'lowpass';
+                    filter.frequency.setValueAtTime(120, audioCtx.currentTime);
+
+                    ambientGain.gain.setValueAtTime(0.05, audioCtx.currentTime); // Low volume
+
+                    ambientOscillator.connect(filter);
+                    filter.connect(ambientGain);
+                    ambientGain.connect(audioCtx.destination);
+
+                    ambientOscillator.start();
+                    isAmbientPlaying = true;
+                    
+                    audioStatus.textContent = 'Playing (60Hz Server Fan)';
+                    audioStatus.classList.replace('bg-slate-800', 'bg-emerald-500/20');
+                    audioStatus.classList.replace('text-slate-400', 'text-emerald-400');
+                    toggleAmbientBtn.querySelector('i').classList.replace('fa-play', 'fa-pause');
+                } else {
+                    ambientOscillator.stop();
+                    isAmbientPlaying = false;
+                    
+                    audioStatus.textContent = 'Paused';
+                    audioStatus.classList.replace('bg-emerald-500/20', 'bg-slate-800');
+                    audioStatus.classList.replace('text-emerald-400', 'text-slate-400');
+                    toggleAmbientBtn.querySelector('i').classList.replace('fa-pause', 'fa-play');
+                }
+            });
+
+            // Play Startup Chime Effect
+            document.getElementById('btn-sound-chime').addEventListener('click', () => {
+                initAudioContext();
+                const now = audioCtx.currentTime;
+                
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(440, now); // A4
+                osc.frequency.exponentialRampToValueAtTime(880, now + 0.3); // Ramp up to A5
+
+                gain.gain.setValueAtTime(0.15, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.5);
+            });
+
+            // Play Terminal Beep
+            document.getElementById('btn-sound-beep').addEventListener('click', () => {
+                initAudioContext();
+                const now = audioCtx.currentTime;
+
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+
+                osc.type = 'square';
+                osc.frequency.setValueAtTime(800, now);
+
+                gain.gain.setValueAtTime(0.08, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.start(now);
+                osc.stop(now + 0.15);
+            });
+
+            // Custom Audio Preview Player Simulation
+            const speechPlayBtn = document.getElementById('speech-play-btn');
+            const audioProgress = document.getElementById('audio-progress');
+            const audioCurrTime = document.getElementById('audio-curr-time');
+            let isSpeechPlaying = false;
+            let speechInterval = null;
+            let currentSeconds = 0;
+
+            speechPlayBtn.addEventListener('click', () => {
+                initAudioContext();
+                if (!isSpeechPlaying) {
+                    isSpeechPlaying = true;
+                    speechPlayBtn.querySelector('i').classList.replace('fa-play', 'fa-pause');
+                    
+                    // Simulate synthetic audio lecture playback
+                    speechInterval = setInterval(() => {
+                        currentSeconds += 1;
+                        const pct = (currentSeconds / 15) * 100;
+                        audioProgress.style.width = `${pct}%`;
+                        audioCurrTime.textContent = `0:${currentSeconds < 10 ? '0' : ''}${currentSeconds}`;
+
+                        // Play soft talk sound pulse
+                        const osc = audioCtx.createOscillator();
+                        const gain = audioCtx.createGain();
+                        osc.frequency.setValueAtTime(200 + Math.random() * 100, audioCtx.currentTime);
+                        gain.gain.setValueAtTime(0.02, audioCtx.currentTime);
+                        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+                        osc.connect(gain);
+                        gain.connect(audioCtx.destination);
+                        osc.start();
+                        osc.stop(audioCtx.currentTime + 0.08);
+
+                        if (currentSeconds >= 15) {
+                            clearInterval(speechInterval);
+                            isSpeechPlaying = false;
+                            currentSeconds = 0;
+                            audioProgress.style.width = '0%';
+                            audioCurrTime.textContent = '0:00';
+                            speechPlayBtn.querySelector('i').classList.replace('fa-pause', 'fa-play');
+                        }
+                    }, 1000);
+                } else {
+                    clearInterval(speechInterval);
+                    isSpeechPlaying = false;
+                    speechPlayBtn.querySelector('i').classList.replace('fa-pause', 'fa-play');
+                }
+            });
+
+            // 5. Canvas Interactive Network Topology Visualizer
+            const canvas = document.getElementById('networkCanvas');
+            const ctx = canvas.getContext('2d');
+            let animationFrameId;
+
+            function resizeCanvas() {
+                canvas.width = canvas.parentElement.clientWidth;
+                canvas.height = canvas.parentElement.clientHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            // Network Nodes
+            let nodes = [
+                { id: 'Router', x: 0.5, y: 0.3, radius: 18, color: '#0284c7' },
+                { id: 'Server 1', x: 0.25, y: 0.7, radius: 14, color: '#10b981' },
+                { id: 'Server 2', x: 0.5, y: 0.75, radius: 14, color: '#10b981' },
+                { id: 'Firewall', x: 0.75, y: 0.7, radius: 14, color: '#a855f7' }
+            ];
+
+            // Animated Data Packets
+            let packets = [
+                { from: 0, to: 1, progress: 0, speed: 0.008 },
+                { from: 0, to: 2, progress: 0.5, speed: 0.006 },
+                { from: 0, to: 3, progress: 0.2, speed: 0.01 }
+            ];
+
+            function drawNetwork() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                const w = canvas.width;
+                const h = canvas.height;
+
+                // Draw connections/cables
+                packets.forEach(p => {
+                    const startNode = nodes[p.from];
+                    const endNode = nodes[p.to];
+
+                    ctx.beginPath();
+                    ctx.moveTo(startNode.x * w, startNode.y * h);
+                    ctx.lineTo(endNode.x * w, endNode.y * h);
+                    ctx.strokeStyle = '#334155';
+                    ctx.lineWidth = 2;
+                    ctx.setLineDash([4, 4]);
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+                });
+
+                // Update & draw active packets
+                packets.forEach(p => {
+                    p.progress += p.speed;
+                    if (p.progress > 1) p.progress = 0;
+
+                    const startNode = nodes[p.from];
+                    const endNode = nodes[p.to];
+
+                    const currentX = (startNode.x + (endNode.x - startNode.x) * p.progress) * w;
+                    const currentY = (startNode.y + (endNode.y - startNode.y) * p.progress) * h;
+
+                    ctx.beginPath();
+                    ctx.arc(currentX, currentY, 4, 0, Math.PI * 2);
+                    ctx.fillStyle = '#38bdf8';
+                    ctx.shadowColor = '#0284c7';
+                    ctx.shadowBlur = 8;
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                });
+
+                // Draw Nodes
+                nodes.forEach(node => {
+                    const cx = node.x * w;
+                    const cy = node.y * h;
+
+                    // Node Circle
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, node.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = node.color;
+                    ctx.fill();
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#0f172a';
+                    ctx.stroke();
+
+                    // Node Label
+                    ctx.font = '11px Inter, sans-serif';
+                    ctx.fillStyle = '#94a3b8';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(node.id, cx, cy + node.radius + 14);
+                });
+
+                animationFrameId = requestAnimationFrame(drawNetwork);
+            }
+
+            drawNetwork();
+
+            document.getElementById('reset-canvas-btn').addEventListener('click', () => {
+                cancelAnimationFrame(animationFrameId);
+                packets.forEach(p => p.progress = 0);
+                drawNetwork();
+            });
+
+            // 6. Form Validation & Submission
+            const form = document.getElementById('enrollment-form');
+            const fullnameInput = document.getElementById('fullname');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const academicSelect = document.getElementById('academic');
+            const courseSelect = document.getElementById('course-choice');
+
+            const errFullname = document.getElementById('err-fullname');
+            const errEmail = document.getElementById('err-email');
+            const errPhone = document.getElementById('err-phone');
+            const errAcademic = document.getElementById('err-academic');
+            const errCourse = document.getElementById('err-course');
+
+            const modal = document.getElementById('success-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const modalRefCode = document.getElementById('modal-ref-code');
+
+            function validateEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            function validatePhone(phone) {
+                return /^[\d\s\+\-\(\)]{10,}$/.test(phone.trim());
+            }
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                // Validate Fullname
+                if (fullnameInput.value.trim() === '') {
+                    errFullname.classList.remove('hidden');
+                    fullnameInput.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    errFullname.classList.add('hidden');
+                    fullnameInput.classList.remove('border-red-500');
+                }
+
+                // Validate Email
+                if (!validateEmail(emailInput.value.trim())) {
+                    errEmail.classList.remove('hidden');
+                    emailInput.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    errEmail.classList.add('hidden');
+                    emailInput.classList.remove('border-red-500');
+                }
+
+                // Validate Phone
+                if (!validatePhone(phoneInput.value)) {
+                    errPhone.classList.remove('hidden');
+                    phoneInput.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    errPhone.classList.add('hidden');
+                    phoneInput.classList.remove('border-red-500');
+                }
+
+                // Validate Academic
+                if (academicSelect.value === '') {
+                    errAcademic.classList.remove('hidden');
+                    academicSelect.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    errAcademic.classList.add('hidden');
+                    academicSelect.classList.remove('border-red-500');
+                }
+
+                // Validate Course Selection
+                if (courseSelect.value === '') {
+                    errCourse.classList.remove('hidden');
+                    courseSelect.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    errCourse.classList.add('hidden');
+                    courseSelect.classList.remove('border-red-500');
+                }
+
+                if (isValid) {
+                    // Generate reference number
+                    const randomRef = '#TVET-' + Math.floor(1000 + Math.random() * 9000);
+                    modalRefCode.textContent = randomRef;
+
+                    // Show success modal
+                    modal.classList.remove('hidden');
+                    form.reset();
+                }
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+
+            // Close modal when clicking background overlay
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
